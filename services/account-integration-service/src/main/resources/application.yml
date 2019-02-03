@@ -41,12 +41,10 @@ sso:
           type: ENV
           value: SIG_SECRET_KEY
 
-
-
 mambu:
-  payment:
-    url: https://mpo-sandbox.mambucloud.com/api/1/json/public/77/42c79c6a90cd42cfdde7354a7e1bb5752fc3ddae
   saving:
     url: https://showcase.mambu.com/api/savings/search
   loan:
     url: https://showcase.mambu.com/api/loans/search
+  auth:
+    password: ${MAMBU_API_PASSWORD}
