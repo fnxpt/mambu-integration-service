@@ -1,0 +1,91 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "filterConstraints"
+  ],
+  "properties": {
+    "filterConstraints": {
+      "$id": "#/properties/filterConstraints",
+      "type": "array",
+      "title": "The Filterconstraints Schema",
+      "items": {
+        "$id": "#/properties/filterConstraints/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "filterSelection",
+          "filterElement",
+          "value",
+          "dataItemType",
+          "values"
+        ],
+        "properties": {
+          "filterSelection": {
+            "$id": "#/properties/filterConstraints/items/properties/filterSelection",
+            "type": "string",
+            "title": "The Filterselection Schema",
+            "default": "",
+            "examples": [
+              "ACCOUNT_HOLDER_KEY"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "filterElement": {
+            "$id": "#/properties/filterConstraints/items/properties/filterElement",
+            "type": "string",
+            "title": "The Filterelement Schema",
+            "default": "",
+            "examples": [
+              "EQUALS"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "value": {
+            "$id": "#/properties/filterConstraints/items/properties/value",
+            "type": "string",
+            "title": "The Value Schema",
+            "default": "",
+            "examples": [
+              "{{clientKeySara}}"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "dataItemType": {
+            "$id": "#/properties/filterConstraints/items/properties/dataItemType",
+            "type": "string",
+            "title": "The Dataitemtype Schema",
+            "default": "",
+            "examples": [
+              "SAVINGS"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "values": {
+            "$id": "#/properties/filterConstraints/items/properties/values",
+            "type": "array",
+            "title": "The Values Schema",
+            "items": {
+              "$id": "#/properties/filterConstraints/items/properties/values/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "default": "",
+              "examples": [
+                "APPROVED",
+                "ACTIVE",
+                "ACTIVE_IN_ARREARS",
+                "MATURED",
+                "LOCKED",
+                "DORMANT"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

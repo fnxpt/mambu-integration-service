@@ -1,0 +1,829 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://mambu.com/root.json",
+  "type": "object",
+  "title": "Loan",
+  "required": [
+    "encodedKey",
+    "id",
+    "accountHolderKey",
+    "accountHolderType",
+    "creationDate",
+    "approvedDate",
+    "lastModifiedDate",
+    "activationTransactionKey",
+    "lastAccountAppraisalDate",
+    "accountState",
+    "productTypeKey",
+    "loanName",
+    "loanAmount",
+    "periodicPayment",
+    "tranches",
+    "principalDue",
+    "principalPaid",
+    "principalBalance",
+    "redrawBalance",
+    "interestDue",
+    "interestPaid",
+    "interestFromArrearsBalance",
+    "interestFromArrearsDue",
+    "interestFromArrearsPaid",
+    "interestBalance",
+    "feesDue",
+    "feesPaid",
+    "feesBalance",
+    "penaltyDue",
+    "penaltyPaid",
+    "penaltyBalance",
+    "scheduleDueDatesMethod",
+    "prepaymentAcceptance",
+    "futurePaymentsAcceptance",
+    "hasCustomSchedule",
+    "repaymentPeriodCount",
+    "repaymentPeriodUnit",
+    "fixedDaysOfMonth",
+    "shortMonthHandlingMethod",
+    "repaymentInstallments",
+    "gracePeriod",
+    "gracePeriodType",
+    "interestRate",
+    "interestChargeFrequency",
+    "interestCalculationMethod",
+    "interestType",
+    "interestBalanceCalculationMethod",
+    "repaymentScheduleMethod",
+    "paymentMethod",
+    "interestApplicationMethod",
+    "accrueInterestAfterMaturity",
+    "notes",
+    "principalRepaymentInterval",
+    "interestRateSource",
+    "accruedInterest",
+    "interestFromArrearsAccrued",
+    "accruedPenalty",
+    "loanPenaltyCalculationMethod",
+    "principalPaymentSettings",
+    "disbursementDetails",
+    "arrearsTolerancePeriod",
+    "interestRoundingVersion",
+    "prepaymentRecalculationMethod",
+    "principalPaidInstallmentStatus",
+    "latePaymentsRecalculationMethod",
+    "applyInterestOnPrepaymentMethod",
+    "allowOffset"
+  ],
+  "properties": {
+    "encodedKey": {
+      "$id": "#/properties/encodedKey",
+      "type": "string",
+      "title": "The Encodedkey Schema",
+      "default": "",
+      "examples": [
+        "8a858f6a65611bc20165617d926819d7"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "The Id Schema",
+      "default": "",
+      "examples": [
+        "TPRK271"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "accountHolderKey": {
+      "$id": "#/properties/accountHolderKey",
+      "type": "string",
+      "title": "The Accountholderkey Schema",
+      "default": "",
+      "examples": [
+        "8a858f9d65605ff7016561070a1b291f"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "accountHolderType": {
+      "$id": "#/properties/accountHolderType",
+      "type": "string",
+      "title": "The Accountholdertype Schema",
+      "default": "",
+      "examples": [
+        "CLIENT"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "creationDate": {
+      "$id": "#/properties/creationDate",
+      "type": "string",
+      "title": "The Creationdate Schema",
+      "default": "",
+      "examples": [
+        "2018-08-22T11:55:44+0000"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "approvedDate": {
+      "$id": "#/properties/approvedDate",
+      "type": "string",
+      "title": "The Approveddate Schema",
+      "default": "",
+      "examples": [
+        "2018-08-22T13:56:05+0000"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "lastModifiedDate": {
+      "$id": "#/properties/lastModifiedDate",
+      "type": "string",
+      "title": "The Lastmodifieddate Schema",
+      "default": "",
+      "examples": [
+        "2018-08-22T12:01:29+0000"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "activationTransactionKey": {
+      "$id": "#/properties/activationTransactionKey",
+      "type": "string",
+      "title": "The Activationtransactionkey Schema",
+      "default": "",
+      "examples": [
+        "8a858f6a65611bc20165618238981c1c"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "lastAccountAppraisalDate": {
+      "$id": "#/properties/lastAccountAppraisalDate",
+      "type": "string",
+      "title": "The Lastaccountappraisaldate Schema",
+      "default": "",
+      "examples": [
+        "2018-08-27T00:14:58+0000"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "accountState": {
+      "$id": "#/properties/accountState",
+      "type": "string",
+      "title": "The Accountstate Schema",
+      "default": "",
+      "examples": [
+        "ACTIVE"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "productTypeKey": {
+      "$id": "#/properties/productTypeKey",
+      "type": "string",
+      "title": "The Producttypekey Schema",
+      "default": "",
+      "examples": [
+        "8a858f6a65611bc201656178d982193a"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "loanName": {
+      "$id": "#/properties/loanName",
+      "type": "string",
+      "title": "The Loanname Schema",
+      "default": "",
+      "examples": [
+        "Credit card"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "loanAmount": {
+      "$id": "#/properties/loanAmount",
+      "type": "string",
+      "title": "The Loanamount Schema",
+      "default": "",
+      "examples": [
+        "3000"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "periodicPayment": {
+      "$id": "#/properties/periodicPayment",
+      "type": "string",
+      "title": "The Periodicpayment Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "tranches": {
+      "$id": "#/properties/tranches",
+      "type": "array",
+      "title": "The Tranches Schema"
+    },
+    "principalDue": {
+      "$id": "#/properties/principalDue",
+      "type": "string",
+      "title": "The Principaldue Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "principalPaid": {
+      "$id": "#/properties/principalPaid",
+      "type": "string",
+      "title": "The Principalpaid Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "principalBalance": {
+      "$id": "#/properties/principalBalance",
+      "type": "string",
+      "title": "The Principalbalance Schema",
+      "default": "",
+      "examples": [
+        "300"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "redrawBalance": {
+      "$id": "#/properties/redrawBalance",
+      "type": "string",
+      "title": "The Redrawbalance Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "interestDue": {
+      "$id": "#/properties/interestDue",
+      "type": "string",
+      "title": "The Interestdue Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "interestPaid": {
+      "$id": "#/properties/interestPaid",
+      "type": "string",
+      "title": "The Interestpaid Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "interestFromArrearsBalance": {
+      "$id": "#/properties/interestFromArrearsBalance",
+      "type": "string",
+      "title": "The Interestfromarrearsbalance Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "interestFromArrearsDue": {
+      "$id": "#/properties/interestFromArrearsDue",
+      "type": "string",
+      "title": "The Interestfromarrearsdue Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "interestFromArrearsPaid": {
+      "$id": "#/properties/interestFromArrearsPaid",
+      "type": "string",
+      "title": "The Interestfromarrearspaid Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "interestBalance": {
+      "$id": "#/properties/interestBalance",
+      "type": "string",
+      "title": "The Interestbalance Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "feesDue": {
+      "$id": "#/properties/feesDue",
+      "type": "string",
+      "title": "The Feesdue Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "feesPaid": {
+      "$id": "#/properties/feesPaid",
+      "type": "string",
+      "title": "The Feespaid Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "feesBalance": {
+      "$id": "#/properties/feesBalance",
+      "type": "string",
+      "title": "The Feesbalance Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "penaltyDue": {
+      "$id": "#/properties/penaltyDue",
+      "type": "string",
+      "title": "The Penaltydue Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "penaltyPaid": {
+      "$id": "#/properties/penaltyPaid",
+      "type": "string",
+      "title": "The Penaltypaid Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "penaltyBalance": {
+      "$id": "#/properties/penaltyBalance",
+      "type": "string",
+      "title": "The Penaltybalance Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "scheduleDueDatesMethod": {
+      "$id": "#/properties/scheduleDueDatesMethod",
+      "type": "string",
+      "title": "The Scheduleduedatesmethod Schema",
+      "default": "",
+      "examples": [
+        "FIXED_DAYS_OF_MONTH"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "prepaymentAcceptance": {
+      "$id": "#/properties/prepaymentAcceptance",
+      "type": "string",
+      "title": "The Prepaymentacceptance Schema",
+      "default": "",
+      "examples": [
+        "ACCEPT_PREPAYMENTS"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "futurePaymentsAcceptance": {
+      "$id": "#/properties/futurePaymentsAcceptance",
+      "type": "string",
+      "title": "The Futurepaymentsacceptance Schema",
+      "default": "",
+      "examples": [
+        "NO_FUTURE_PAYMENTS"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "hasCustomSchedule": {
+      "$id": "#/properties/hasCustomSchedule",
+      "type": "boolean",
+      "title": "The Hascustomschedule Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "repaymentPeriodCount": {
+      "$id": "#/properties/repaymentPeriodCount",
+      "type": "integer",
+      "title": "The Repaymentperiodcount Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "repaymentPeriodUnit": {
+      "$id": "#/properties/repaymentPeriodUnit",
+      "type": "string",
+      "title": "The Repaymentperiodunit Schema",
+      "default": "",
+      "examples": [
+        "DAYS"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "fixedDaysOfMonth": {
+      "$id": "#/properties/fixedDaysOfMonth",
+      "type": "array",
+      "title": "The Fixeddaysofmonth Schema",
+      "items": {
+        "$id": "#/properties/fixedDaysOfMonth/items",
+        "type": "integer",
+        "title": "The Items Schema",
+        "default": 0,
+        "examples": [
+          31
+        ]
+      }
+    },
+    "shortMonthHandlingMethod": {
+      "$id": "#/properties/shortMonthHandlingMethod",
+      "type": "string",
+      "title": "The Shortmonthhandlingmethod Schema",
+      "default": "",
+      "examples": [
+        "LAST_DAY_IN_MONTH"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "repaymentInstallments": {
+      "$id": "#/properties/repaymentInstallments",
+      "type": "integer",
+      "title": "The Repaymentinstallments Schema",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "gracePeriod": {
+      "$id": "#/properties/gracePeriod",
+      "type": "integer",
+      "title": "The Graceperiod Schema",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "gracePeriodType": {
+      "$id": "#/properties/gracePeriodType",
+      "type": "string",
+      "title": "The Graceperiodtype Schema",
+      "default": "",
+      "examples": [
+        "NONE"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "interestRate": {
+      "$id": "#/properties/interestRate",
+      "type": "string",
+      "title": "The Interestrate Schema",
+      "default": "",
+      "examples": [
+        "5"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "interestChargeFrequency": {
+      "$id": "#/properties/interestChargeFrequency",
+      "type": "string",
+      "title": "The Interestchargefrequency Schema",
+      "default": "",
+      "examples": [
+        "ANNUALIZED"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "interestCalculationMethod": {
+      "$id": "#/properties/interestCalculationMethod",
+      "type": "string",
+      "title": "The Interestcalculationmethod Schema",
+      "default": "",
+      "examples": [
+        "DECLINING_BALANCE"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "interestType": {
+      "$id": "#/properties/interestType",
+      "type": "string",
+      "title": "The Interesttype Schema",
+      "default": "",
+      "examples": [
+        "SIMPLE_INTEREST"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "interestBalanceCalculationMethod": {
+      "$id": "#/properties/interestBalanceCalculationMethod",
+      "type": "string",
+      "title": "The Interestbalancecalculationmethod Schema",
+      "default": "",
+      "examples": [
+        "PRINCIPAL_ONLY"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "repaymentScheduleMethod": {
+      "$id": "#/properties/repaymentScheduleMethod",
+      "type": "string",
+      "title": "The Repaymentschedulemethod Schema",
+      "default": "",
+      "examples": [
+        "DYNAMIC"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "paymentMethod": {
+      "$id": "#/properties/paymentMethod",
+      "type": "string",
+      "title": "The Paymentmethod Schema",
+      "default": "",
+      "examples": [
+        "HORIZONTAL"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "interestApplicationMethod": {
+      "$id": "#/properties/interestApplicationMethod",
+      "type": "string",
+      "title": "The Interestapplicationmethod Schema",
+      "default": "",
+      "examples": [
+        "ON_REPAYMENT"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "accrueInterestAfterMaturity": {
+      "$id": "#/properties/accrueInterestAfterMaturity",
+      "type": "boolean",
+      "title": "The Accrueinterestaftermaturity Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "notes": {
+      "$id": "#/properties/notes",
+      "type": "string",
+      "title": "The Notes Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "principalRepaymentInterval": {
+      "$id": "#/properties/principalRepaymentInterval",
+      "type": "integer",
+      "title": "The Principalrepaymentinterval Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "interestRateSource": {
+      "$id": "#/properties/interestRateSource",
+      "type": "string",
+      "title": "The Interestratesource Schema",
+      "default": "",
+      "examples": [
+        "FIXED_INTEREST_RATE"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "accruedInterest": {
+      "$id": "#/properties/accruedInterest",
+      "type": "string",
+      "title": "The Accruedinterest Schema",
+      "default": "",
+      "examples": [
+        "0.25"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "interestFromArrearsAccrued": {
+      "$id": "#/properties/interestFromArrearsAccrued",
+      "type": "string",
+      "title": "The Interestfromarrearsaccrued Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "accruedPenalty": {
+      "$id": "#/properties/accruedPenalty",
+      "type": "string",
+      "title": "The Accruedpenalty Schema",
+      "default": "",
+      "examples": [
+        "0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "loanPenaltyCalculationMethod": {
+      "$id": "#/properties/loanPenaltyCalculationMethod",
+      "type": "string",
+      "title": "The Loanpenaltycalculationmethod Schema",
+      "default": "",
+      "examples": [
+        "NONE"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "principalPaymentSettings": {
+      "$id": "#/properties/principalPaymentSettings",
+      "type": "object",
+      "title": "The Principalpaymentsettings Schema",
+      "required": [
+        "percentage",
+        "encodedKey",
+        "principalPaymentMethod",
+        "includeInterestInFloorAmount",
+        "includeFeesInFloorAmount"
+      ],
+      "properties": {
+        "percentage": {
+          "$id": "#/properties/principalPaymentSettings/properties/percentage",
+          "type": "string",
+          "title": "The Percentage Schema",
+          "default": "",
+          "examples": [
+            "10"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "encodedKey": {
+          "$id": "#/properties/principalPaymentSettings/properties/encodedKey",
+          "type": "string",
+          "title": "The Encodedkey Schema",
+          "default": "",
+          "examples": [
+            "8a858f6a65611bc20165617d926819d8"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "principalPaymentMethod": {
+          "$id": "#/properties/principalPaymentSettings/properties/principalPaymentMethod",
+          "type": "string",
+          "title": "The Principalpaymentmethod Schema",
+          "default": "",
+          "examples": [
+            "OUTSTANDING_PRINCIPAL_PERCENTAGE"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "includeInterestInFloorAmount": {
+          "$id": "#/properties/principalPaymentSettings/properties/includeInterestInFloorAmount",
+          "type": "boolean",
+          "title": "The Includeinterestinflooramount Schema",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "includeFeesInFloorAmount": {
+          "$id": "#/properties/principalPaymentSettings/properties/includeFeesInFloorAmount",
+          "type": "boolean",
+          "title": "The Includefeesinflooramount Schema",
+          "default": false,
+          "examples": [
+            false
+          ]
+        }
+      }
+    },
+    "disbursementDetails": {
+      "$id": "#/properties/disbursementDetails",
+      "type": "object",
+      "title": "The Disbursementdetails Schema",
+      "required": [
+        "encodedKey",
+        "expectedDisbursementDate",
+        "disbursementDate",
+        "fees"
+      ],
+      "properties": {
+        "encodedKey": {
+          "$id": "#/properties/disbursementDetails/properties/encodedKey",
+          "type": "string",
+          "title": "The Encodedkey Schema",
+          "default": "",
+          "examples": [
+            "8a858f6a65611bc20165617d926819d9"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "expectedDisbursementDate": {
+          "$id": "#/properties/disbursementDetails/properties/expectedDisbursementDate",
+          "type": "string",
+          "title": "The Expecteddisbursementdate Schema",
+          "default": "",
+          "examples": [
+            "2018-08-21T00:00:00+0000"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "disbursementDate": {
+          "$id": "#/properties/disbursementDetails/properties/disbursementDate",
+          "type": "string",
+          "title": "The Disbursementdate Schema",
+          "default": "",
+          "examples": [
+            "2018-08-21T00:00:00+0000"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "fees": {
+          "$id": "#/properties/disbursementDetails/properties/fees",
+          "type": "array",
+          "title": "The Fees Schema"
+        }
+      }
+    },
+    "arrearsTolerancePeriod": {
+      "$id": "#/properties/arrearsTolerancePeriod",
+      "type": "integer",
+      "title": "The Arrearstoleranceperiod Schema",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "interestRoundingVersion": {
+      "$id": "#/properties/interestRoundingVersion",
+      "type": "string",
+      "title": "The Interestroundingversion Schema",
+      "default": "",
+      "examples": [
+        "VERSION_1"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "prepaymentRecalculationMethod": {
+      "$id": "#/properties/prepaymentRecalculationMethod",
+      "type": "string",
+      "title": "The Prepaymentrecalculationmethod Schema",
+      "default": "",
+      "examples": [
+        "NO_RECALCULATION"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "principalPaidInstallmentStatus": {
+      "$id": "#/properties/principalPaidInstallmentStatus",
+      "type": "string",
+      "title": "The Principalpaidinstallmentstatus Schema",
+      "default": "",
+      "examples": [
+        "PARTIALLY_PAID"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "latePaymentsRecalculationMethod": {
+      "$id": "#/properties/latePaymentsRecalculationMethod",
+      "type": "string",
+      "title": "The Latepaymentsrecalculationmethod Schema",
+      "default": "",
+      "examples": [
+        "INCREASE_OVERDUE_INSTALLMENTS"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "applyInterestOnPrepaymentMethod": {
+      "$id": "#/properties/applyInterestOnPrepaymentMethod",
+      "type": "string",
+      "title": "The Applyinterestonprepaymentmethod Schema",
+      "default": "",
+      "examples": [
+        "AUTOMATIC"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "allowOffset": {
+      "$id": "#/properties/allowOffset",
+      "type": "boolean",
+      "title": "The Allowoffset Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    }
+  }
+}

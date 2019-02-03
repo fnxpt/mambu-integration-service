@@ -1,0 +1,77 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://mambu.com/payment-request.json",
+  "type": "object",
+  "title": "Payment Request",
+  "required": [
+    "accountId",
+    "amount",
+    "beneficiary_account",
+    "beneficiary_bank",
+    "beneficiary_name",
+    "notes"
+  ],
+  "properties": {
+    "accountId": {
+      "$id": "#/properties/accountId",
+      "type": "string",
+      "title": "The Accountid Schema",
+      "default": "",
+      "examples": [
+        "8a858f6a65611bc2016561855aa91d51"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "amount": {
+      "$id": "#/properties/amount",
+      "type": "string",
+      "title": "The Amount Schema",
+      "default": "",
+      "examples": [
+        "2"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "beneficiary_account": {
+      "$id": "#/properties/beneficiary_account",
+      "type": "string",
+      "title": "The Beneficiary_account Schema",
+      "default": "",
+      "examples": [
+        "54814789"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "beneficiary_bank": {
+      "$id": "#/properties/beneficiary_bank",
+      "type": "string",
+      "title": "The Beneficiary_bank Schema",
+      "default": "",
+      "examples": [
+        "040010"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "beneficiary_name": {
+      "$id": "#/properties/beneficiary_name",
+      "type": "string",
+      "title": "The Beneficiary_name Schema",
+      "default": "",
+      "examples": [
+        "Sara"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "notes": {
+      "$id": "#/properties/notes",
+      "type": "string",
+      "title": "The Notes Schema",
+      "default": "",
+      "examples": [
+        "Test from Backbase"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}

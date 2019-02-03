@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>backbase-integration-starter-parent</artifactId>
+        <groupId>com.backbase.buildingblocks</groupId>
+        <version>5.12.0</version>
+    </parent>
+
+    <groupId>com.backbase.showcase.services</groupId>
+    <artifactId>account-integration-service</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>Account Integration Service</name>
+
+    <properties>
+        <service.version>0</service.version>
+        <skip.integration.tests>false</skip.integration.tests>
+        <backbase.dbs.version>2.14.0</backbase.dbs.version>
+        <jacoco.version>0.7.6.201602180812</jacoco.version>
+        <skip.integration.tests>false</skip.integration.tests>
+        <skip.unit.tests>false</skip.unit.tests>
+        <sonar-maven-plugin.version>3.3.0.603</sonar-maven-plugin.version>
+        <sonar.java.codeCoveragePlugin>jacoco</sonar.java.codeCoveragePlugin>
+        <coverage.reports.dir>${project.build.directory}/coverage-reports</coverage.reports.dir>
+        <sonar.jacoco.reportPath>${coverage.reports.dir}/jacoco.exec</sonar.jacoco.reportPath>
+        <sonar.jacoco.itReportPath>${coverage.reports.dir}/jacoco-it.exec</sonar.jacoco.itReportPath>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.backbase.dbs</groupId>
+                <artifactId>banking-services-bom</artifactId>
+                <version>${backbase.dbs.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.backbase.dbs.account</groupId>
+            <artifactId>account-integration-spec</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.backbase.buildingblocks</groupId>
+            <artifactId>api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.backbase.buildingblocks</groupId>
+            <artifactId>communication</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.backbase.dbs.legalentity</groupId>
+            <artifactId>legalentity-presentation-spec</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.backbase.showcase</groupId>
+            <artifactId>mambu-client-service</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

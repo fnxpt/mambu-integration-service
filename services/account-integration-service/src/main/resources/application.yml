@@ -1,0 +1,52 @@
+server:
+  port: 9921
+  contextPath: /account-integration-service
+
+# Logging
+logging:
+  level:
+    root: INFO
+    com.backbase: INFO
+    org.springframework: INFO
+
+spring:
+  activemq:
+    broker-url: ${activemq.url:tcp://localhost:61616}
+  jmx:
+    default-domain: ${spring.application.name}
+  jta:
+    logDir: target/${spring.application.name}-logs
+
+idempotencyConfiguration:
+  cacheName: ${spring.application.name}Cache
+
+backbase:
+  communication:
+    logRequests: true
+    logReplies: true
+  web:
+    security:
+      enabled: true
+  security:
+    public:
+      paths: /**
+
+sso:
+  jwt:
+    internal:
+      type: signed
+      signature:
+        algorithm: HS256
+        key:
+          type: ENV
+          value: SIG_SECRET_KEY
+
+
+
+mambu:
+  payment:
+    url: https://mpo-sandbox.mambucloud.com/api/1/json/public/77/42c79c6a90cd42cfdde7354a7e1bb5752fc3ddae
+  saving:
+    url: https://showcase.mambu.com/api/savings/search
+  loan:
+    url: https://showcase.mambu.com/api/loans/search

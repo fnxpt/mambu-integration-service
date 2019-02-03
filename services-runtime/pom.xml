@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <artifactId>services-runtime</artifactId>
+    <version>1.1.1</version>
+    <groupId>com.backbase.showcase</groupId>
+
+    <properties>
+        <project.root>${basedir}</project.root>
+        <data.dir>${project.root}/data</data.dir>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <port>9123</port>
+        <registry.host>localhost</registry.host>
+        <registry.port>8080</registry.port>
+        <registry.client.url>http://${registry.host}:${registry.port}/registry/eureka</registry.client.url>
+        <sig.secret.key>JWTSecretKeyDontUseInProduction!</sig.secret.key>
+        <ext.sig.secret.key>JWTSecretKeyDontUseInProduction!</ext.sig.secret.key>
+        <ext.enc.secret.key>JWTEncKeyDontUseInProduction666!</ext.enc.secret.key>
+        <user.context.key>JWTSecretKeyDontUseInProduction!</user.context.key>
+
+        <blade.openBrowserOnStartup>true</blade.openBrowserOnStartup>
+        <blade.multiThreaded>true</blade.multiThreaded>
+        <manager.url>http://localhost:8080/gateway/cxp-manager</manager.url>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.backbase.showcase.services</groupId>
+            <artifactId>account-integration-service</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>dist</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <version>3.0.0</version>
+                        <executions>
+                            <execution>
+                                <id>copy-war-files</id>
+                                <phase>process-resources</phase>
+                                <goals>
+                                    <goal>copy-dependencies</goal>
+                                </goals>
+                                <configuration>
+                                    <outputDirectory>./target/dist</outputDirectory>
+                                    <overWriteReleases>false</overWriteReleases>
+                                    <overWriteSnapshots>false</overWriteSnapshots>
+                                    <overWriteIfNewer>true</overWriteIfNewer>
+                                    <stripVersion>true</stripVersion>
+                                    <includeTypes>war</includeTypes>
+                                    <excludeScope>provided</excludeScope>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <build>
+
+        <plugins>
+            <plugin>
+                <groupId>com.backbase.maven.plugins</groupId>
+                <artifactId>blade-maven-plugin</artifactId>
+                <version>2.0.80</version>
+                <configuration>
+                    <openBrowserOnStartup>true</openBrowserOnStartup>
+                    <port>9123</port>
+                    <name>Custom Services</name>
+                    <systemProperties>
+                        <BACKBASE_ENVROLE>editorial</BACKBASE_ENVROLE>
+
+                        <!-- File System directory CX6 will write too -->
+                        <BACKBASE_HOME>${project.basedir}/target/cx/</BACKBASE_HOME>
+
+                        <!-- Active MQ Configuration -->
+                        <SPRING_ACTIVEMQ_BROKER_URL>tcp://localhost:61616</SPRING_ACTIVEMQ_BROKER_URL>
+                        <SPRING_ACTIVEMQ_USER>admin</SPRING_ACTIVEMQ_USER>
+                        <SPRING_ACTIVEMQ_PASSWORD>admin</SPRING_ACTIVEMQ_PASSWORD>
+
+                        <!-- Non Spring Boot applications still require system properties -->
+                        <spring.activemq.broker-url>tcp://localhost:61616</spring.activemq.broker-url>
+                        <spring.activemq.user>admin</spring.activemq.user>
+                        <spring.activemq.password>admin</spring.activemq.password>
+
+                        <!-- Disable logging encoding -->
+                        <logging.secured.enabled>false</logging.secured.enabled>
+
+                        <!-- Service Registry -->
+                        <REGISTRY_HOST>${registry.host}</REGISTRY_HOST>
+                        <REGISTRY_PORT>${registry.port}</REGISTRY_PORT>
+
+
+                        <GATEWAY_REGISTRY_HOST>localhost</GATEWAY_REGISTRY_HOST>
+                        <AUTH_REGISTRY_HOST>localhost</AUTH_REGISTRY_HOST>
+                        <ACTIVEMQ_URL>tcp://localhost:61616</ACTIVEMQ_URL>
+
+                        <!-- Shared Secret key to validate Internal JWT signature -->
+                        <SIG_SECRET_KEY>${sig.secret.key}</SIG_SECRET_KEY>
+
+
+                        <eureka.client.serviceUrl>defaultZone=${registry.client.url}</eureka.client.serviceUrl>
+                        <eureka.client.serviceUrl.defaultZone>${registry.client.url}</eureka.client.serviceUrl.defaultZone>
+
+                        <eureka.instance.nonSecurePort>${port}</eureka.instance.nonSecurePort>
+                        <eureka.instance.hostname>${registry.host}</eureka.instance.hostname>
+                        <eureka.instance.preferIpAddress>false</eureka.instance.preferIpAddress>
+
+                        <EXTERNAL_ENC_SECRET_KEY>${ext.enc.secret.key}</EXTERNAL_ENC_SECRET_KEY>
+                        <EXTERNAL_SIG_SECRET_KEY>${ext.sig.secret.key}</EXTERNAL_SIG_SECRET_KEY>
+                        <!-- Disable logging encoding -->
+                        <logging.secured.enabled>false</logging.secured.enabled>
+
+                        <!-- Entitlements User Context key -->
+                        <USERCTX_KEY>${user.context.key}</USERCTX_KEY>
+
+
+                    </systemProperties>
+                    <stages>
+                        <stage>
+                            <id>custom-services</id>
+                            <name>Custom Services</name>
+                            <autoStart>true</autoStart>
+                            <multiThreaded>${blade.multiThreaded}</multiThreaded>
+                            <webApps>
+                                <webApp>
+                                    <groupId>com.backbase.showcase.services</groupId>
+                                    <artifactId>account-integration-service</artifactId>
+                                </webApp>
+                            </webApps>
+                        </stage>
+                    </stages>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.41</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

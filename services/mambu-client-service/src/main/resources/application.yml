@@ -1,0 +1,7 @@
+mambu:
+  saving:
+    url: https://showcase.mambu.com/api/savings/search
+  loan:
+    url: https://showcase.mambu.com/api/loans/search
+  auth:
+    password: ${MAMBU_API_PASSWORD}

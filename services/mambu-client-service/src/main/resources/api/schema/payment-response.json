@@ -1,0 +1,75 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://mambu.com/payment-response.json",
+  "type": "object",
+  "title": "Payment Response",
+  "required": [
+    "request_proc",
+    "ops"
+  ],
+  "properties": {
+    "request_proc": {
+      "$id": "#/properties/request_proc",
+      "type": "string",
+      "title": "The Request_proc Schema",
+      "default": "",
+      "examples": [
+        "ok"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "ops": {
+      "$id": "#/properties/ops",
+      "type": "object",
+      "title": "The Ops Schema",
+      "required": [
+        "proc",
+        "obj",
+        "ref",
+        "obj_id"
+      ],
+      "properties": {
+        "proc": {
+          "$id": "#/properties/ops/properties/proc",
+          "type": "string",
+          "title": "The Proc Schema",
+          "default": "",
+          "examples": [
+            "ok"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "obj": {
+          "$id": "#/properties/ops/properties/obj",
+          "type": "string",
+          "title": "The Obj Schema",
+          "default": "",
+          "examples": [
+            "task"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "ref": {
+          "$id": "#/properties/ops/properties/ref",
+          "type": "null",
+          "title": "The Ref Schema",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "obj_id": {
+          "$id": "#/properties/ops/properties/obj_id",
+          "type": "string",
+          "title": "The Obj_id Schema",
+          "default": "",
+          "examples": [
+            "5b80016a09a8af17c70019ff"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    }
+  }
+}
