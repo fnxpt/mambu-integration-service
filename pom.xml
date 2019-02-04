@@ -9,9 +9,12 @@
   <name>Backbase Accelerators :: Mambu Integration</name>
   <version>1.0.0-SNAPSHOT</version>
   <modules>
-    <module>services</module>
-    <module>services-runtime</module>
+    <module>mambu-client-service</module>
+    <module>account-integration-service</module>
   </modules>
+  <properties>
+    <backbase.dbs.version>2.14.0</backbase.dbs.version>
+  </properties>
 
   <packaging>pom</packaging>
 

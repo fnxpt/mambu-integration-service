@@ -38,7 +38,7 @@ public class BalanceListenerImpl implements BalanceListener {
      * Consume the Camel route, add products balance data to the return object and copy request proxy wrapper values to
      * it
      *
-     * @return RequestProxyWrapper<List   <   BalanceGetResponseBody>>
+     * @return RequestProxyWrapper<List<BalanceGetResponseBody>>
      */
     @Override
     public RequestProxyWrapper<List<BalanceGetResponseBody>> getBalance(RequestProxyWrapper<Void> request,
