@@ -4,6 +4,13 @@ The Mambu integration service enables you to connect with Mambu core banking API
 - Retrieve arrangement details 
 - Retrieve account balances
 
+Setup Mambu to ingest transaction data using the DBS Transactions API. Example: 
+```
+POST
+https://<Platform Services>:<port>/gateway/api/transaction-integration-external-inbound-service/v2/transactions
+```
+Find more information about managing transactions on [Community](https://community.backbase.com/documentation/DBS/latest/transactions_manage#transactions_manage).
+
 Installation
 ============
 
