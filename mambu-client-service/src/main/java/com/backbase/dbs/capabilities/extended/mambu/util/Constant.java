@@ -1,4 +1,4 @@
-package com.backbase.showcase.client.mambu.util;
+package com.backbase.dbs.capabilities.extended.mambu.util;
 
 /**
  * Class to store constants

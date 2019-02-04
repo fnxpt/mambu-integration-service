@@ -1,9 +1,8 @@
-package com.backbase.showcase.accounts;
+package com.backbase.dbs.capabilities.extended.mambu.accounts;
 
 import com.backbase.buildingblocks.backend.configuration.autoconfigure.BackbaseApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 
 @BackbaseApplication

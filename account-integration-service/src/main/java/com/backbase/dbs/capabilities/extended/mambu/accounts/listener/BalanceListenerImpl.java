@@ -1,14 +1,12 @@
-package com.backbase.showcase.accounts.listener;
+package com.backbase.dbs.capabilities.extended.mambu.accounts.listener;
 
-import com.backbase.buildingblocks.backend.api.utils.ApiUtils;
 import com.backbase.buildingblocks.backend.communication.event.annotations.RequestListener;
 import com.backbase.buildingblocks.backend.communication.event.proxy.RequestProxyWrapper;
-import com.backbase.buildingblocks.backend.internalrequest.InternalRequest;
 import com.backbase.buildingblocks.presentation.errors.BadRequestException;
 import com.backbase.buildingblocks.presentation.errors.InternalServerErrorException;
+import com.backbase.dbs.capabilities.extended.mambu.accounts.service.ProductService;
 import com.backbase.integration.account.listener.spec.v2.balances.BalanceListener;
 import com.backbase.integration.account.rest.spec.v2.balances.BalanceGetResponseBody;
-import com.backbase.showcase.accounts.service.ProductService;
 import org.apache.camel.Exchange;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +21,7 @@ import java.util.List;
  */
 @Service
 @RequestListener
-public class BalanceListenerImpl implements BalanceListener {
+public class BalanceListenerImpl extends AbstractListener implements BalanceListener {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BalanceListenerImpl.class);
 
@@ -44,19 +42,12 @@ public class BalanceListenerImpl implements BalanceListener {
     public RequestProxyWrapper<List<BalanceGetResponseBody>> getBalance(RequestProxyWrapper<Void> request,
         Exchange exchange, String arrangementIds) throws BadRequestException, InternalServerErrorException {
 
-        InternalRequest<List<BalanceGetResponseBody>> balanceGetResponseBodyInternalRequests = new InternalRequest<>();
-
         List<BalanceGetResponseBody> balance = productService
             .getProductBalance(Arrays.asList(arrangementIds.split(",")));
         LOGGER.info("Balance found: {}", balance);
 
-        balanceGetResponseBodyInternalRequests.setData(balance);
+        return buildResponse(request, balance);
 
-        RequestProxyWrapper<List<BalanceGetResponseBody>> returnProxyWrapper = new RequestProxyWrapper<>();
-        ApiUtils.copyRequestProxyWrapperValues(request, returnProxyWrapper);
-        returnProxyWrapper.setRequest(balanceGetResponseBodyInternalRequests);
-
-        return returnProxyWrapper;
 
     }
 }

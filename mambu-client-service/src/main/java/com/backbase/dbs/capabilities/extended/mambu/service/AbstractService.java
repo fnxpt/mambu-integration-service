@@ -1,8 +1,8 @@
-package com.backbase.showcase.client.mambu.service;
+package com.backbase.dbs.capabilities.extended.mambu.service;
 
-import com.backbase.showcase.client.mambu.domain.FilterConstraint;
-import com.backbase.showcase.client.mambu.domain.Search;
-import com.backbase.showcase.client.mambu.util.Constant;
+import com.backbase.dbs.capabilities.extended.mambu.client.mambu.domain.FilterConstraint;
+import com.backbase.dbs.capabilities.extended.mambu.client.mambu.domain.Search;
+import com.backbase.dbs.capabilities.extended.mambu.util.Constant;
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;

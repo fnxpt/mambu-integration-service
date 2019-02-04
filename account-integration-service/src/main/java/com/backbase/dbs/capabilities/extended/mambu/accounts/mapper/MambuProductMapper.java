@@ -1,9 +1,9 @@
-package com.backbase.showcase.accounts.mapper;
+package com.backbase.dbs.capabilities.extended.mambu.accounts.mapper;
 
 import com.backbase.integration.account.rest.spec.v2.arrangementdetails.ArrangementDetailsGetResponseBody;
 import com.backbase.integration.account.rest.spec.v2.balances.BalanceGetResponseBody;
-import com.backbase.showcase.client.mambu.domain.Loan;
-import com.backbase.showcase.client.mambu.domain.Saving;
+import com.backbase.dbs.capabilities.extended.mambu.client.mambu.domain.Loan;
+import com.backbase.dbs.capabilities.extended.mambu.client.mambu.domain.Saving;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
