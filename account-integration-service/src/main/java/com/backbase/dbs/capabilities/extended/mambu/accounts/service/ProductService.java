@@ -1,12 +1,12 @@
-package com.backbase.showcase.accounts.service;
+package com.backbase.dbs.capabilities.extended.mambu.accounts.service;
 
 import com.backbase.integration.account.rest.spec.v2.arrangementdetails.ArrangementDetailsGetResponseBody;
 import com.backbase.integration.account.rest.spec.v2.balances.BalanceGetResponseBody;
-import com.backbase.showcase.accounts.mapper.MambuProductMapper;
-import com.backbase.showcase.client.mambu.domain.Loan;
-import com.backbase.showcase.client.mambu.domain.Saving;
-import com.backbase.showcase.client.mambu.service.LoanService;
-import com.backbase.showcase.client.mambu.service.SavingService;
+import com.backbase.dbs.capabilities.extended.mambu.accounts.mapper.MambuProductMapper;
+import com.backbase.dbs.capabilities.extended.mambu.client.mambu.domain.Loan;
+import com.backbase.dbs.capabilities.extended.mambu.client.mambu.domain.Saving;
+import com.backbase.dbs.capabilities.extended.mambu.service.LoanService;
+import com.backbase.dbs.capabilities.extended.mambu.service.SavingService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,9 +1,9 @@
-package com.backbase.showcase.client.mambu.service;
+package com.backbase.dbs.capabilities.extended.mambu.service;
 
-import com.backbase.showcase.client.mambu.domain.FilterConstraint;
-import com.backbase.showcase.client.mambu.domain.Saving;
-import com.backbase.showcase.client.mambu.domain.Search;
-import com.backbase.showcase.client.mambu.util.Constant;
+import com.backbase.dbs.capabilities.extended.mambu.client.mambu.domain.FilterConstraint;
+import com.backbase.dbs.capabilities.extended.mambu.client.mambu.domain.Saving;
+import com.backbase.dbs.capabilities.extended.mambu.client.mambu.domain.Search;
+import com.backbase.dbs.capabilities.extended.mambu.util.Constant;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;

@@ -9,11 +9,11 @@
         <version>5.12.0</version>
     </parent>
 
-    <groupId>com.backbase.showcase.services</groupId>
+    <groupId>com.backbase.dbs.capabilities.extended.mambu</groupId>
     <artifactId>account-integration-service</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>Account Integration Service</name>
+    <name>Backbase Accelerators :: Account Integration Service</name>
 
     <properties>
         <service.version>0</service.version>
@@ -61,7 +61,7 @@
             <artifactId>legalentity-presentation-spec</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.backbase.showcase</groupId>
+            <groupId>com.backbase.dbs.capabilities.extended.mambu</groupId>
             <artifactId>mambu-client-service</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>

@@ -9,10 +9,10 @@
         <relativePath />
     </parent>
 
-    <groupId>com.backbase.showcase</groupId>
+    <groupId>com.backbase.dbs.capabilities.extended.mambu</groupId>
     <artifactId>mambu-client-service</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>Mambu Client Service</name>
+    <name>Backbase Accelerators :: Mambu Client Service</name>
 
     <properties>
         <jacoco.version>0.7.6.201602180812</jacoco.version>
@@ -102,7 +102,7 @@
                 </executions>
                 <configuration>
                     <sourceDirectory>${basedir}/src/main/resources/api/schema</sourceDirectory>
-                    <targetPackage>com.backbase.showcase.client.mambu.domain</targetPackage>
+                    <targetPackage>com.backbase.dbs.capabilities.extended.mambu.client.mambu.domain</targetPackage>
                     <outputDirectory>${project.build.directory}/generated-sources/</outputDirectory>
                 </configuration>
             </plugin>
