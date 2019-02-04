@@ -1,6 +1,8 @@
-# Mambu integration accelerator
+# Mambu integration service demo in DBS 
 
-Integration sample service with Mambu core banking API for retrieving arrangements and balances using product summary DBS capability
+The Mambu integration service enables you to connect with Mambu core banking API to:
+- Retrieve arrangement details 
+- Retrieve account balances
 
 Installation
 ============
