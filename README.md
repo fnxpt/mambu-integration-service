@@ -22,12 +22,12 @@ Installation
 
  > Check community for more details: https://community.backbase.com/documentation/ServiceSDK/latest/deploy_developer_environment
 
- > for more details of how to run a custom service: https://community.backbase.com/documentation/ServiceSDK/latest/deploy_custom_services
+ > for more details on how to run a custom service: https://community.backbase.com/documentation/ServiceSDK/latest/deploy_custom_services
 
 
 ### Configure
 
-In order to obtain the data from Mambu API, we need to configure our auth credentials in the following property:
+In order to obtain the data from Mambu API you need to configure our auth credentials in the following property:
 
 ```yaml
 mambu:
@@ -35,9 +35,9 @@ mambu:
     password:
 ```
 
-By default, this property will be set as an environment variable called 'MAMBU_API_PASSWORD'
+By default, this property will be set as an environment variable called `MAMBU_API_PASSWORD`
 
-Also the environment variable 'SIG_SECRET_KEY' must be set in order to start the service.
+Also the environment variable `SIG_SECRET_KEY` must be set in order to start the service.
 
 ### Build
 
